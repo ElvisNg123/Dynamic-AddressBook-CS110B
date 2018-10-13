@@ -33,7 +33,9 @@ struct node* addEntry(struct node*head,int &count){
     }
     head = newNode;
     count++; 
+    cout <<" "<< endl;
     cout << head-> firstname<<" "<< head-> lastname<< " successfully added to address book" << endl;
+
     return head;
     
     
@@ -90,6 +92,7 @@ void searchContact(struct node*head,int &count)
   if (!matchFound){
         cout << "There was no match for that entry" << endl;
   }
+  cout <<" "<< endl;
 }
 
 void displayMenu()
@@ -108,12 +111,12 @@ int main(){
     bool keepPlaying = true;
     int count = 0;
     while (keepPlaying) {
+        cout <<"******************************************"<< endl;
         displayMenu();
         
         int menu_choice;
         cout << "Please choose an option";
         cin >> menu_choice;
-        cout << myList-> firstname<<" "<< myList-> lastname<< endl;
 
         //address book array
 
@@ -133,6 +136,7 @@ int main(){
         {
             keepPlaying = false;
         }
+        cout <<" "<< endl;
     }
         
 }
